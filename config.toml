@@ -1,4 +1,4 @@
-baseURL = "https://asccclass.github.io"
+baseURL = "https://asfaqs.github.io/"
 languageCode = "zh-tw"
 defaultContentLanguage = "zh-tw"
 title = 'Sinica FAQ'
@@ -13,7 +13,7 @@ googleAnalytics = ''
 disqusShortname = 'itgfaq'
 
 [Params]
-  editURL = "https://github.com/asccclass/aifaq.github.io/tree/main/content/"
+  editURL = "https://github.com/asfaqs/asfaqs.github.io/tree/main/content/"
   description = "Sinica FAQ Project"
   author = "ITs"
   showVisitedLinks = true
@@ -54,7 +54,7 @@ landingPageName = "<i class='fas fa-home'></i> Home"
 [[Languages.en.menu.shortcuts]]
 name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
 identifier = "ds"
-url = "https://github.com/asccclass/aifaq.github.io"
+url = "https://github.com/asfaq/asfaq.github.io"
 weight = 10
 
 [[Languages.en.menu.shortcuts]]
