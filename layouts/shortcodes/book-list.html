@@ -1,0 +1,45 @@
+{{ if .IsNamedParams }}
+   {{ $data := index $.Site.Data $.Params.id }}
+   {{ range $index, $elem := $data.items }}
+      <div class=expand>
+         <input type=checkbox id=expand-{{ $index }} aria-controls=expandcontent-{{ $index }}>
+         <label class=expand-label for=expand-{{ $index }}>
+            <i class="fas fa-chevron-down"></i>
+            <i class="fas fa-chevron-right"></i>
+            {{ $elem.question }}
+         </label>
+         <div id="expandcontent-{{ $index }}" class="expand-content">
+            <p><font color="{{ $.Params.color }}"><b>{{ $elem.answer }}</b></font></p>
+            <div>
+               <p>
+                  <small class="datasource">
+                     資料來源：<a href="{{ $elem.url }}" target=_blank>{{ $elem.url }}</a>&nbsp;
+                     本則FAQ聯絡資訊：{{ $elem.contact }}
+                  </small>
+               </p>
+            </div>
+         </div>
+      </div>
+   {{ end }}
+{{ end }}
+
+<p>
+   <font color="red" size="2pt">本內容使用生成式人工智慧技術產生，若內容說明有不清楚與不得體處，尚請見諒並與資訊服務處反應</font>
+</p>
+
+<script
+  src="https://code.jquery.com/jquery-3.6.4.js"
+  integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+  crossorigin="anonymous"></script>
+<style>
+.expand > .expand-content {
+   margin-left: 1.1rem;
+}
+.datasource {
+   color: #9e9e9f;
+}
+
+.datasource .highlight {
+   color: #9e9e9f;
+}
+</style>
