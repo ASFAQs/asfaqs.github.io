@@ -1,6 +1,9 @@
 baseURL = "https://asfaqs.github.io/"
+
 languageCode = "zh-tw"
 defaultContentLanguage = "zh-tw"
+
+
 title = 'Sinica FAQ'
 theme = "hugo-theme-relearn"
 metaDataFormat = "json"
@@ -45,11 +48,11 @@ disqusShortname = 'itgfaq'
 
 [Languages]
 [Languages.en]
-title = "Tutorial for CIoT Open Data Applications"
-weight = 1
-languageName = "English"
-landingPageURL = "/"
-landingPageName = "<i class='fas fa-home'></i> Home"
+   title = "Tutorial for CIoT Open Data Applications"
+   weight = 1
+   languageName = "English"
+   landingPageURL = "/"
+   landingPageName = "<i class='fas fa-home'></i> Home"
 
 [[Languages.en.menu.shortcuts]]
 name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
@@ -108,3 +111,11 @@ weight = 2
 languageName = "中文"
 landingPageURL = "/"
 landingPageName = "<i class='fas fa-home'></i> 首頁"
+
+[Languages.ar]
+   title = "ar"
+   weight = 1
+   languageName = "ar"
+   landingPageURL = "data/its_ar/"
+   landingPageName = "<i class='fas fa-home'></i> Home"
+
