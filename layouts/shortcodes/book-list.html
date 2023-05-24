@@ -10,6 +10,31 @@
                 {{ $key }}
              </button>
          </h2>
+         <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+               {{ range $index, $elem := $vals }}
+                  <div class=expand>
+                     <input type=checkbox id=expand-{{ $index }} aria-controls=expandcontent-{{ $index }}>
+                     <label class=expand-label for=expand-{{ $index }}>
+                        <i class="fas fa-chevron-down"></i>
+                        <i class="fas fa-chevron-right"></i>
+                        【{{ $key }}】{{ $elem.question }}
+                     </label>
+                     <div id="expandcontent-{{ $index }}" class="expand-content">
+                        <p><font color="{{ $.Params.color }}"><b>{{ $elem.answer }}</b></font></p>
+                        <div>
+                           <p>
+                              <small class="datasource">
+                                 資料來源：<a href="{{ $elem.url }}" target=_blank>{{ $elem.url }}</a>&nbsp;
+                                 本則FAQ聯絡資訊：{{ $elem.contact }}
+                              </small>
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+               {{ end }}
+            </div>
+         </div>
       {{ end }}
    </div>
 {{ end }}
