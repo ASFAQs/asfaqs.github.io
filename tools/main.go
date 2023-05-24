@@ -4,7 +4,7 @@ import(
    "os"
    "fmt"
    "io"
-   "strconv"
+   // "strconv"
    "strings"
    "io/ioutil"
    "encoding/csv"
@@ -13,6 +13,7 @@ import(
 
 // category,title,question,group,url,contact,answer
 type Items struct {
+   Title		string		`json:"title"`
    Question		string		`json:"question"`
    Answer		string		`json:"answer"`
    Category		string		`json:"category"`
@@ -21,9 +22,9 @@ type Items struct {
 }
 
 type CSv struct {
-   ID		string		`json:"id"`
-   Name		string		`json:"name"`
-   ITEMs	[]Items		`json:"items"`
+   ID		string			`json:"id"`
+   Name		string			`json:"name"`
+   ITEMs	map[string][]Items	`json:"items"`
 }
 
 func W(fileName string, content []byte)(error) {
@@ -60,6 +61,7 @@ func main() {
    r := csv.NewReader(file)
    r.Comma = ','   // 以何種字元作分隔，預設為`,`。所以這裡可拿掉這行
    i := 0
+   items := map[string][]Items{}
    for {
       record, err := r.Read()
       if err == io.EOF {
@@ -73,15 +75,18 @@ func main() {
          continue
       }
       t := Items {
+         Title:	   record[title["title"]],
          Question: record[title["question"]],
          Answer:   record[title["answer"]],
          Category: record[title["category"]],
          Contact:  record[title["contact"]],
          Url:      record[title["url"]],
       }
-      datas.ITEMs = append(datas.ITEMs, t)
+      items[t.Category] = append(items[t.Category], t)
+      // datas.ITEMs = append(datas.ITEMs, t)
       i += 1
    }
+   datas.ITEMs = items
    s, err := json.Marshal(datas)
    if err != nil {
       fmt.Println(err.Error())
@@ -92,6 +97,7 @@ func main() {
       fmt.Println(err.Error())
       return
    }
+/*
    subCategory := map[string][]Items{}
    for _, item := range datas.ITEMs {
       if len(subCategory[item.Category]) == 0 {
@@ -119,4 +125,5 @@ func main() {
       }
       fmt.Println(k)
    }
+*/
 }

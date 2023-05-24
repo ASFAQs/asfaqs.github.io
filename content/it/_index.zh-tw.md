@@ -3,4 +3,4 @@
 "weight": 20
 ---
 
-{{< book-list id="it" data="items" color="#87984d" >}}
+{{< book-list id="its" data="items" color="#9b8eb0" >}}
