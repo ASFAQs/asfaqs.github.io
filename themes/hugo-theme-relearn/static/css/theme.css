@@ -1020,7 +1020,7 @@ option {
 
 .expand > .expand-content {
    margin-top: .5rem;
-   font-size:1.2em;
+   font-size: 0.9em;
 }
 /* closed expander */
 .expand > input + label + div {
