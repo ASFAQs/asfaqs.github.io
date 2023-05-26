@@ -17,7 +17,7 @@ disqusShortname = 'itgfaq'
 
 [Params]
   editURL = "https://github.com/asfaqs/asfaqs.github.io/tree/main/content/"
-  description = "Sinica FAQ Project"
+  description = "Academia Sinica FAQ Project"
   author = "ITs"
   showVisitedLinks = true
   #collapsibleMenu = true
