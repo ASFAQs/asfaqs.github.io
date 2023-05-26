@@ -379,7 +379,7 @@ pre .copy-to-clipboard-button:hover {
 }
 
 .expand > label {
-   font-size: 1.3em;
+   font-size: 1em;
    color: black; /*var(--INTERNAL-MAIN-LINK-color);*/
    font-weight: 500;
 }
