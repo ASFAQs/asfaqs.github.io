@@ -837,8 +837,8 @@ html[dir="rtl"] #body #breadcrumbs {
 }
 
 #body #breadcrumbs .links {
-    display: inline;
-    padding: 0 .75rem;
+   display: inline;
+   padding: 0 .75rem;
 }
 @media screen and (max-width: 48rem) {
     #body #breadcrumbs .links {
@@ -1115,8 +1115,9 @@ html[dir="rtl"] .expand > .expand-label > i.fa-chevron-right {
 #body a.highlight,
 #body a.highlight:hover,
 #body a.highlight:focus {
-    outline-style: none;
-    text-decoration: none;
+   outline-style: none;
+   text-decoration: none;
+   color: white;
 }
 
 #body a.highlight {
