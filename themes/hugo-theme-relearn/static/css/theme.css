@@ -1663,8 +1663,9 @@ article ul > li > input[type="checkbox"]:checked::before {
 /* basic menu list styles (non-collapsible) */
 
 #sidebar ul > li > a {
-    display: block;
-    position: relative;
+   display: block;
+   position: relative;
+   text-decoration: none;
 }
 
 #sidebar ul.space > li > * {
