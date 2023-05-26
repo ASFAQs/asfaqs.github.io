@@ -16,13 +16,13 @@
             <div class="accordion-body">
                {{ range $index, $elem := $vals }}
                   <div class=expand>
-                     <input type=checkbox id=expand-{{ $data.id }}{{ $index }} aria-controls=expandcontent-{{ $data.id }}{{ $index }}>
-                     <label class=expand-label for=expand-{{ $data.id }}{{ $index }}>
+                     <input type=checkbox id=expand-{{ $key }}{{ $data.id }}{{ $index }} aria-controls=expandcontent-{{ $data.id }}{{ $index }}>
+                     <label class=expand-label for=expand-{{ $key }}{{ $data.id }}{{ $index }}>
                         <i class="fas fa-chevron-down"></i>
                         <i class="fas fa-chevron-right"></i>
                         【{{ $elem.title }}】{{ $elem.question }}
                      </label>
-                     <div id="expandcontent-{{ $data.id }}{{ $index }}" class="expand-content">
+                     <div id="expandcontent-{{ $key }}{{ $data.id }}{{ $index }}" class="expand-content">
                         <p><font color="{{ $.Params.color }}"><b>{{ $elem.answer }}</b></font></p>
                         <div>
                            <p>
