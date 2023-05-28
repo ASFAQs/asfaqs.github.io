@@ -9,7 +9,7 @@
       {{ range $key, $vals := $data.items }}
          <h2 class="accordion-header">
              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse{{ $key }}" aria-expanded="false" aria-controls="flush-collapse{{ $key }}">
-                {{ $key }}
+                <h2>{{ $key }}</h2>
              </button>
          </h2>
          <div id="flush-collapse{{ $key }}" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
@@ -27,7 +27,8 @@
                         <div>
                            <p>
                               <small class="datasource">
-                                 資料來源：<a href="{{ $elem.url }}" target=_blank>{{ $elem.url }}</a>&nbsp;
+                                 資料來源：<a href="{{ $elem.url }}" target=_blank>
+                                 <font color="{{ $.Params.color }}">{{ $elem.url }}</font></a>&nbsp;
                                  本則FAQ聯絡資訊：{{ $elem.contact }}
                               </small>
                            </p>
