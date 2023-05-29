@@ -7,7 +7,6 @@
    {{ $data := index $.Site.Data $.Params.id }}
    <div class="accordion_one">
       <div id="accordion">
-         {{ $index := 0 }}
          {{ range $key, $vals := $data.items }}
             <div class="card">
                <div class="card-header" id="heading-{{ $key }}">
@@ -17,7 +16,7 @@
                      </button>
                   </h5>
                </div>
-               <div id="collapse-{{$key}}" class="collapse{{ if $index eq 0 }} show {{ end }}" aria-labelledby="heading-{{$key}}" data-parent="#accordion">
+               <div id="collapse-{{$key}}" class="collapse show" aria-labelledby="heading-{{$key}}" data-parent="#accordion">
                   <div class="card-body">
                      <div class="panel-group" id="accordionFourLeft">
                         {{ range $index, $elem := $vals }}
@@ -50,7 +49,6 @@
                   </div>
                </div>
             </div>
-         {{ $index := add $index 1 }}
          {{ end }}
       </div>
    </div>
