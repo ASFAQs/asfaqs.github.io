@@ -5,42 +5,52 @@
 
 {{ if .IsNamedParams }}
    {{ $data := index $.Site.Data $.Params.id }}
-   <div class="accordion" id="accordionFlushExample">
-      {{ range $key, $vals := $data.items }}
-      <div class="accordion-item">
-         <h2 class="accordion-header">
-             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse{{ $key }}" aria-expanded="false" aria-controls="flush-collapse{{ $key }}">
-                {{ $key }}
-             </button>
-         </h2>
-         <div id="flush-collapse{{ $key }}" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-            <div class="card-body">
-               {{ range $index, $elem := $vals }}
-                  <div class=expand>
-                     <input type=checkbox id=expand-{{ $key }}{{ $data.id }}{{ $index }} aria-controls=expandcontent-{{ $data.id }}{{ $index }}>
-                     <label class=expand-label for=expand-{{ $key }}{{ $data.id }}{{ $index }}>
-                        <i class="fas fa-chevron-down"></i>
-                        <i class="fas fa-chevron-right"></i>
-                        【{{ $elem.title }}】{{ $elem.question }}
-                     </label>
-                     <div id="expandcontent-{{ $key }}{{ $data.id }}{{ $index }}" class="expand-content">
-                        <p><font color="{{ $.Params.color }}"><b>{{ $elem.answer }}</b></font></p>
-                        <div>
-                           <p>
-                              <small class="datasource">
-                                 資料來源：<a href="{{ $elem.url }}" target=_blank>
-                                 <font color="{{ $.Params.color }}">{{ $elem.url }}</font></a>&nbsp;
-                                 本則FAQ聯絡資訊：{{ $elem.contact }}
-                              </small>
-                           </p>
-                        </div>
+   <div class="accordion_one">
+      <div id="accordion">
+         {{ range $key, $vals := $data.items }}
+            <div class="card">
+               <div class="card-header" id="heading-{{ $key }}">
+                  <h5 class="mb-0">
+                     <button class="btn btn-link" data-toggle="collapse" data-target="#collapse-{{key}}" aria-expanded="false" aria-controls="collapse{{ $key }}">
+                        <h2>{{ $key }}</h2>
+                     </button>
+                  </h5>
+               </div>
+               <div id="collapse-{{key}}" class="collapse" aria-labelledby="heading-{{key}}" data-parent="#accordion">
+                  <div class="card-body">
+                     <div class="panel-group" id="accordionFourLeft">
+                        {{ range $index, $elem := $vals }}
+                           <div class="panel panel_default">
+                              <div class="panel-heading">
+                                 <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion_oneLeft" href="#collapseFiveLeft-{{ $key }}{{ $data.id }}{{ $index }}" aria-expanded="false" class="collapsed">
+                                    【{{ $elem.title }}】{{ $elem.question }}</a>
+                                 </h4> 
+                              </div>
+                              <div id="collapseFiveLeft-{{ $key }}{{ $data.id }}{{ $index }}" class="panel-collapse collapse" aria-expanded="false" role="tablist">
+                                 <div class="panel-body">
+                                    <div class="text-accordion">
+                                       <p><font color="{{ $.Params.color }}"><b>{{ $elem.answer }}</b></font></p>
+                                       <div>
+                                          <p>
+                                             <small class="datasource">
+                                                資料來源：<a href="{{ $elem.url }}" target=_blank>
+                                                <font color="{{ $.Params.color }}">{{ $elem.url }}</font></a>&nbsp;
+                                                本則FAQ聯絡資訊：{{ $elem.contact }}
+                                             </small>
+                                          </p>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        {{ end }}
                      </div>
                   </div>
-               {{ end }}
+               </div>
             </div>
-         </div>
+         {{ end }}
       </div>
-      {{ end }}
    </div>
 {{ end }}
 
