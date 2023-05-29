@@ -1,5 +1,5 @@
 ---
-"title": "ITS"
+"title": "Computing Facility"
 "weight": 20
 ---
 
