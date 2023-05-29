@@ -86,5 +86,5 @@ weight = 120
    title = 'Academia Sinica FAQ'
    weight = 2
    languageName = "English"
-   landingPageURL = "/"
+   landingPageURL = "/en/"
    landingPageName = "<i class='fas fa-home'></i> Home"
