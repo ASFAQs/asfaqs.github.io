@@ -27,7 +27,7 @@
                                     【{{ $elem.title }}】{{ $elem.question }}</button>
                                  </h4> 
                               </div>
-                              <div id="collapseFiveLeft-{{$key}}{{ $data.id }}{{ $index }}" class="panel-collapse collapse {{ $index eq 0}}show{{ end }}" aria-expanded="false" role="tablist">
+                              <div id="collapseFiveLeft-{{$key}}{{ $data.id }}{{ $index }}" class="panel-collapse collapse {{if $index eq 0}}show{{ end }}" aria-expanded="false" role="tablist">
                                  <div class="panel-body">
                                     <div class="text-accordion">
                                        <p><font color="{{ $.Params.color }}"><b>{{ $elem.answer }}</b></font></p>
