@@ -1,7 +1,7 @@
 baseURL = "https://asfaqs.github.io/"
 
 languageCode = "zh-tw"
-defaultContentLanguage = "tw"
+defaultContentLanguage = "zh-tw"
 
 title = 'Academia Sinica FAQ'
 theme = "hugo-theme-relearn"
