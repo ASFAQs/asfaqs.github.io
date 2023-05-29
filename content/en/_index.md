@@ -1,2 +1,2 @@
 ### Please click the FAQ below
-{{< _index >}}
+{{< /en/_index >}}
