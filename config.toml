@@ -79,6 +79,7 @@ weight = 120
    title = "中央研究院 FAQ 首頁"
    weight = 1
    languageName = "中文"
+   languageCode = "zh-tw"
    landingPageURL = "/"
    landingPageName = "<i class='fas fa-home'></i> 首頁"
 
@@ -88,3 +89,6 @@ weight = 120
    languageName = "English"
    landingPageURL = "/en/"
    landingPageName = "<i class='fas fa-home'></i> Home"
+[[languages.en.menu.main]]
+name = "Academia"
+url = "/academia"
