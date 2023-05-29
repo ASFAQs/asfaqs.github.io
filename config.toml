@@ -3,8 +3,7 @@ baseURL = "https://asfaqs.github.io/"
 languageCode = "zh-tw"
 defaultContentLanguage = "zh-tw"
 
-
-title = 'Sinica FAQ'
+title = 'Academia Sinica FAQ'
 theme = "hugo-theme-relearn"
 metaDataFormat = "json"
 
@@ -77,11 +76,11 @@ weight = 120
 
 
 [Languages.zh-tw]
-title = "Sinica FAQ Homepage"
-weight = 2
-languageName = "中文"
-landingPageURL = "/"
-landingPageName = "<i class='fas fa-home'></i> 首頁"
+   title = "中央研究院FAQ首頁"
+   weight = 2
+   languageName = "中文"
+   landingPageURL = "/"
+   landingPageName = "<i class='fas fa-home'></i> 首頁"
 
 [Languages.en]
    title = "Tutorial for CIoT Open Data Applications"
