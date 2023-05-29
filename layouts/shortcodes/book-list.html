@@ -11,12 +11,12 @@
             <div class="card">
                <div class="card-header" id="heading-{{ $key }}">
                   <h5 class="mb-0">
-                     <button class="btn btn-link" data-toggle="collapse" data-target="#collapse-{{key}}" aria-expanded="false" aria-controls="collapse{{ $key }}">
+                     <button class="btn btn-link" data-toggle="collapse" data-target="#collapse-{{$key}}" aria-expanded="false" aria-controls="collapse{{ $key }}">
                         <h2>{{ $key }}</h2>
                      </button>
                   </h5>
                </div>
-               <div id="collapse-{{key}}" class="collapse" aria-labelledby="heading-{{key}}" data-parent="#accordion">
+               <div id="collapse-{{$key}}" class="collapse" aria-labelledby="heading-{{$key}}" data-parent="#accordion">
                   <div class="card-body">
                      <div class="panel-group" id="accordionFourLeft">
                         {{ range $index, $elem := $vals }}
