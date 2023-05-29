@@ -48,7 +48,7 @@ disqusShortname = 'itgfaq'
 [Languages]
 [Languages.ja]
 title = "人々のためのパブリック・インターネット・オブ・シングス(Civil IoT Taiwan)"
-weight = 1
+weight = 4
 languageName = "日本語"
 landingPageURL = "/"
 landingPageName = "<i class='fas fa-home'></i> Home"
@@ -77,21 +77,21 @@ weight = 120
 
 [Languages.zh-tw]
    title = "中央研究院 FAQ 首頁"
-   weight = 2
+   weight = 1
    languageName = "中文"
    landingPageURL = "/"
    landingPageName = "<i class='fas fa-home'></i> 首頁"
 
 [Languages.en]
    title = 'Academia Sinica FAQ'
-   weight = 1
+   weight = 2
    languageName = "English"
    landingPageURL = "data/en/"
    landingPageName = "<i class='fas fa-home'></i> Home"
 
 [Languages.ar]
    title = "ar"
-   weight = 1
+   weight = 3
    languageName = "ar"
    landingPageURL = "data/its_ar/"
    landingPageName = "<i class='fas fa-home'></i> Home"
