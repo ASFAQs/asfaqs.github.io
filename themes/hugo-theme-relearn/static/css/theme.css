@@ -1117,7 +1117,6 @@ html[dir="rtl"] .expand > .expand-label > i.fa-chevron-right {
 #body a.highlight:focus {
    outline-style: none;
    text-decoration: none;
-   color: white;
 }
 
 #body a.highlight {
