@@ -1,6 +1,6 @@
 ---
-"title": "生活"
+"title": "Life"
 "weight": 50
 ---
 
-{{< book-list id="life" data="items" color="#b49150" >}}
+{{< book-list id="life.en" data="items" color="#b49150" >}}
