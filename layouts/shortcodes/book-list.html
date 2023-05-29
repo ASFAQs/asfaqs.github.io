@@ -16,18 +16,18 @@
                      </button>
                   </h5>
                </div>
-               <div id="collapse-{{$key}}" class="collapse" aria-labelledby="heading-{{trim $key}}" data-parent="#accordion">
+               <div id="collapse-{{$key}}" class="collapse" aria-labelledby="heading-{{trim $key " "}}" data-parent="#accordion">
                   <div class="card-body">
                      <div class="panel-group" id="accordionFourLeft">
                         {{ range $index, $elem := $vals }}
                            <div class="panel panel_default">
                               <div class="panel-heading">
                                  <h4 class="panel-title">
-                                    <button type="button" class="btn btn-link collapsed" data-bs-toggle="collapse" data-parent="#accordion_oneLeft" data-bs-target="#collapseFiveLeft-{{trim $key}}{{ $data.id }}{{ $index }}" aria-expanded="false" aria-controls="collapseFiveLeft-{{trim $key}}{{ $data.id }}{{ $index }}">
+                                    <button type="button" class="btn btn-link collapsed" data-bs-toggle="collapse" data-parent="#accordion_oneLeft" data-bs-target="#collapseFiveLeft-{{trim $key " "}}{{ $data.id }}{{ $index }}" aria-expanded="false" aria-controls="collapseFiveLeft-{{trim $key " "}}{{ $data.id }}{{ $index }}">
                                     【{{ $elem.title }}】{{ $elem.question }}</button>
                                  </h4> 
                               </div>
-                              <div id="collapseFiveLeft-{{trim $key}}{{ $data.id }}{{ $index }}" class="panel-collapse collapse" aria-expanded="false" role="tablist">
+                              <div id="collapseFiveLeft-{{trim $key " "}}{{ $data.id }}{{ $index }}" class="panel-collapse collapse" aria-expanded="false" role="tablist">
                                  <div class="panel-body">
                                     <div class="text-accordion">
                                        <p><font color="{{ $.Params.color }}"><b>{{ $elem.answer }}</b></font></p>
