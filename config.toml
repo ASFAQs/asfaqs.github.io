@@ -1,7 +1,7 @@
 baseURL = "https://asfaqs.github.io/"
 
 languageCode = "zh-tw"
-defaultContentLanguage = "zh-tw"
+defaultContentLanguage = "tw"
 
 title = 'Academia Sinica FAQ'
 theme = "hugo-theme-relearn"
@@ -9,13 +9,13 @@ metaDataFormat = "json"
 
 # required for official documentation served from subfolder
 relativeURLs = false
-defaultContentLanguageInSubdir= false
+defaultContentLanguageInSubdir = false
 
 googleAnalytics = ''
-disqusShortname = 'itgfaq'
+disqusShortname = 'asfaqs'
 
 [Params]
-  editURL = "https://github.com/asfaqs/asfaqs.github.io/tree/main/content/"
+  editURL = "https://asfaqs.github.io/"
   description = "Academia Sinica FAQ Project"
   author = "ITs"
   showVisitedLinks = true
@@ -42,7 +42,7 @@ disqusShortname = 'itgfaq'
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
-  #section = ["HTML", "RSS" ]
+  section = ["HTML", "RSS", "JSON" ]
   page = ["HTML", "RSS", "JSON"]
 
 [Languages]
