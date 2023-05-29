@@ -2,6 +2,7 @@ baseURL = "https://asfaqs.github.io/"
 
 languageCode = "zh-tw"
 defaultContentLanguage = "zh-tw"
+defaultContentLanguageInSubdir = true
 
 title = 'Academia Sinica FAQ'
 theme = "hugo-theme-relearn"
@@ -9,7 +10,6 @@ metaDataFormat = "json"
 
 # required for official documentation served from subfolder
 relativeURLs = false
-defaultContentLanguageInSubdir = false
 
 googleAnalytics = ''
 disqusShortname = 'asfaqs'
