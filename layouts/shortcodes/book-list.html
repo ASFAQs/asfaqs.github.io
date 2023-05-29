@@ -34,12 +34,13 @@
                                        <div>
                                           <p>
                                              <small class="datasource">
-{{ $.Site.Language.Lang }}
                                                 {{ if eq $.Site.Language.Lang "en" }} From: {{ end }}
                                                 {{ if eq $.Site.Language.Lang "tw" }} 資料來源：{{ end }}
                                                 <a href="{{ $elem.url }}" target=_blank>
                                                 <font color="{{ $.Params.color }}">{{ $elem.url }}</font></a>&nbsp;
-                                                本則FAQ聯絡資訊：{{ $elem.contact }}
+                                                {{ if eq $.Site.Language.Lang "en" }} Contact info: {{ end }}
+                                                {{ if eq $.Site.Language.Lang "tw" }} 本則FAQ聯絡資訊：{{ end }}
+                                                {{ $elem.contact }}
                                              </small>
                                           </p>
                                        </div>
