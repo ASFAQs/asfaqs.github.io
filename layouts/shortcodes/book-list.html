@@ -7,6 +7,7 @@
    {{ $data := index $.Site.Data $.Params.id }}
    <div class="accordion_one">
       <div id="accordion">
+         {{ $index := 0 }}
          {{ range $key, $vals := $data.items }}
             <div class="card">
                <div class="card-header" id="heading-{{ $key }}">
@@ -49,6 +50,7 @@
                   </div>
                </div>
             </div>
+         {{ $index := add $index 1 }}
          {{ end }}
       </div>
    </div>
