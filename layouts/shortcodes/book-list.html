@@ -11,7 +11,7 @@
             <div class="card">
                <div class="card-header" id="heading-{{ $key }}">
                   <h5 class="mb-0">
-                     <button type="button" class="btn btn-link collapsed" style="border-style: none;" data-bs-toggle="collapse" data-bs-target="#collapse-{{$key}}" aria-expanded="false" aria-controls="collapse-{{ $key }}">
+                     <button type="button" class="btn btn-link collapsed" style="border-style:none;" data-bs-toggle="collapse" data-bs-target="#collapse-{{$key}}" aria-expanded="false" aria-controls="collapse-{{ $key }}">
                         <h2>{{ $key }}</h2>
                      </button>
                   </h5>
@@ -23,7 +23,7 @@
                            <div class="panel panel_default">
                               <div class="panel-heading">
                                  <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordion_oneLeft" href="#collapseFiveLeft-{{ $data.id }}{{ $index }}" aria-expanded="false" class="collapsed">
+                                    <a data-bs-toggle="collapse" data-parent="#accordion_oneLeft" href="#collapseFiveLeft-{{ $data.id }}{{ $index }}" aria-expanded="false" class="collapsed">
                                     【{{ $elem.title }}】{{ $elem.question }}</a>
                                  </h4> 
                               </div>
@@ -150,19 +150,6 @@ h4 {
    content: "\2212";
 }
 
-.accordion_one .panel .panel-heading a:after, .accordion_one .panel .panel-heading a.collapsed:after {
-   font-family: 'FontAwesome';
-   font-size: 15px;
-   width: 36px;
-   height: 48px;
-   line-height: 48px;
-   text-align: center;
-   background: #F1F1F1;
-   float: left;
-   margin-left: -31px;
-   margin-top: -12px;
-   margin-right: 15px;
-}
 /*
 .expand > .expand-content {
    margin-left: 1.1rem;
