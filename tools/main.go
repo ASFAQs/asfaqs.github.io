@@ -94,7 +94,7 @@ func main() {
    }
    part := strings.Split(FilePath, ".")
    filename := part[0];
-   if len(part) > 3 {
+   if len(part) > 2 {
       filename = filename + "." + part[1]
    }
    if err := W(filename + ".json", s); err != nil {
