@@ -76,39 +76,18 @@ weight = 120
 
 
 [Languages.zh-tw]
-   title = "中央研究院FAQ首頁"
+   title = "中央研究院 FAQ 首頁"
    weight = 2
    languageName = "中文"
    landingPageURL = "/"
    landingPageName = "<i class='fas fa-home'></i> 首頁"
 
 [Languages.en]
-   title = "Tutorial for CIoT Open Data Applications"
+   title = 'Academia Sinica FAQ'
    weight = 1
    languageName = "English"
-   landingPageURL = "/"
+   landingPageURL = "data/en/"
    landingPageName = "<i class='fas fa-home'></i> Home"
-
-[[Languages.en.menu.shortcuts]]
-   name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
-   identifier = "ds"
-   url = "https://github.com/asfaq/asfaq.github.io"
-   weight = 10
-
-[[Languages.en.menu.shortcuts]]
-   name = "<i class='fas fa-fw fa-heartbeat'></i> Search by difficulty"
-   url = "levels/"
-   weight = 100
-
-[[Languages.en.menu.shortcuts]]
-   name = "<i class='fas fa-fw fa-tags'></i> Search by topics"
-   url = "tags/"
-   weight = 110
-
-[[Languages.en.menu.shortcuts]]
-   name = "<i class='fas fa-fw fa-users'></i> Search by authors"
-   url = "authors/"
-   weight = 120
 
 [Languages.ar]
    title = "ar"
