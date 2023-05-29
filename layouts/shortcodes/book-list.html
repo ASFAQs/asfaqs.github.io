@@ -16,7 +16,7 @@
                      </button>
                   </h5>
                </div>
-               <div id="collapse-{{$key}}" class="collapse" aria-labelledby="heading-{{$key}}" data-parent="#accordion">
+               <div id="collapse-{{$key}}" class="collapse {{if eq $index 0}}show{{ end }}" aria-labelledby="heading-{{$key}}" data-parent="#accordion">
                   <div class="card-body">
                      <div class="panel-group" id="accordionFourLeft">
                         {{ range $index, $elem := $vals }}
@@ -27,7 +27,7 @@
                                     【{{ $elem.title }}】{{ $elem.question }}</button>
                                  </h4> 
                               </div>
-                              <div id="collapseFiveLeft-{{$key}}{{ $data.id }}{{ $index }}" class="panel-collapse collapse {{if eq $index 0}}show{{ end }}" aria-expanded="false" role="tablist">
+                              <div id="collapseFiveLeft-{{$key}}{{ $data.id }}{{ $index }}" class="panel-collapse collapse" aria-expanded="false" role="tablist">
                                  <div class="panel-body">
                                     <div class="text-accordion">
                                        <p><font color="{{ $.Params.color }}"><b>{{ $elem.answer }}</b></font></p>
