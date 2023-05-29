@@ -4,9 +4,11 @@ import(
    "os"
    "fmt"
    "io"
-   // "strconv"
+   "time"
    "strings"
+   "strconv"
    "io/ioutil"
+   "math/rand"
    "encoding/csv"
    "encoding/json"
 )
@@ -23,6 +25,7 @@ type Items struct {
 
 type CSv struct {
    ID		string			`json:"id"`
+   Serial	string			`json:"serial"`
    Name		string			`json:"name"`
    ITEMs	map[string][]Items	`json:"items"`
 }
@@ -43,15 +46,18 @@ func main() {
       fmt.Println("filename is empty")
       return
    }
+   fname := strings.Split(FilePath, ".")
    categoryLists := map[string]CSv {
-      "academia.csv": { ID: "1", Name:"學術" },
-      "its.csv": { ID: "10", Name:"資訊" },
-      "hr.csv": { ID: "20", Name:"人事" },
-      "budget.csv": { ID: "30", Name:"經費" },
-      "life.csv": { ID: "40", Name:"生活" },
+      "academia": { ID: "1", Name:"學術" },
+      "its": { ID: "10", Name:"資訊" },
+      "hr": { ID: "20", Name:"人事" },
+      "budget": { ID: "30", Name:"經費" },
+      "life": { ID: "40", Name:"生活" },
    }
-   datas := categoryLists[FilePath] 
+   datas := categoryLists[fname[0]] 
    title := map[string]int{}
+   rand.Seed(time.Now().UnixNano())
+   datas.Serial = strconv.FormatInt(int64(rand.Intn(1000)), 10)
 
    file, err := os.OpenFile(FilePath, os.O_RDONLY, 0777)
    if err != nil {
@@ -111,9 +117,11 @@ func main() {
    }
    i = 10
    for k, t := range subCategory {
+      rand.Seed(time.Now().UnixNano())
       id := strconv.FormatInt(int64(i), 10)
       ss := CSv {
          ID: id,
+         Serial: rand.Intn(1000),
          Name: k,
          ITEMs: t,
       }
