@@ -23,8 +23,8 @@
                            <div class="panel panel_default">
                               <div class="panel-heading">
                                  <h4 class="panel-title">
-                                    <a data-bs-toggle="collapse" data-parent="#accordion_oneLeft" href="#collapseFiveLeft-{{$key}}{{ $data.id }}{{ $index }}" aria-expanded="false" class="collapsed">
-                                    【{{ $elem.title }}】{{ $elem.question }}</a>
+                                    <button type="button" class="btn btn-link collapsed" data-bs-toggle="collapse" data-parent="#accordion_oneLeft" data-bs-target="#collapseFiveLeft-{{$key}}{{ $data.id }}{{ $index }}" aria-expanded="false" aria-controls="collapseFiveLeft-{{$key}}{{ $data.id }}{{ $index }}">
+                                    【{{ $elem.title }}】{{ $elem.question }}</button>
                                  </h4> 
                               </div>
                               <div id="collapseFiveLeft-{{$key}}{{ $data.id }}{{ $index }}" class="panel-collapse collapse" aria-expanded="false" role="tablist">
