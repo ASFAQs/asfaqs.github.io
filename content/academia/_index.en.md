@@ -3,7 +3,7 @@
 "weight": 10
 ---
 
-{{< book-list id="academia.tw" data="items" color="#7984ad" >}}
+{{< book-list id="academia.en" data="items" color="#7984ad" >}}
 <p>
    <font color="red" size="2pt">The content is generated using generative artificial intelligence technology, if the content description is unclear or inappropriate, please forgive and react with the information service</font>
 </p>
