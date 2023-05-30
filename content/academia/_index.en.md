@@ -1,6 +1,7 @@
 ---
 "title": "Academia"
 "weight": 10
+"translationKey": "academia"
 ---
 
 {{< book-list id="academia.en" data="items" color="#7984ad" >}}
