@@ -1,22 +1,42 @@
 <div class="cards">
    <div class="card">
       <a href="academia/index.html">
-         <img src="/images/academia.png">
+         {{ if eq $.Site.Language.Lang "en" }}
+            <img src="/images/academia_en.png">
+         {{ end }}
+         {{ if eq $.Site.Language.Lang "tw" }}
+            <img src="/images/academia.png">
+         {{ end }}
       </a>
    </div>
    <div class="card">
       <a href="its/index.html">
-         <img src="/images/its.png">
+         {{ if eq $.Site.Language.Lang "en" }}
+            <img src="/images/its_en.png">
+         {{ end }}
+         {{ if eq $.Site.Language.Lang "tw" }}
+            <img src="/images/its.png">
+         {{ end }}
       </a>
    </div>
    <div class="card">
       <a href="budget/index.html">
-         <img src="/images/budget.png">
+         {{ if eq $.Site.Language.Lang "en" }}
+            <img src="/images/budget_en.png">
+         {{ end }}
+         {{ if eq $.Site.Language.Lang "tw" }}
+            <img src="/images/budget.png">
+         {{ end }}
       </a>
    </div>
    <div class="card">
       <a href="life/index.html">
-         <img src="/images/life.png">
+         {{ if eq $.Site.Language.Lang "en" }}
+            <img src="/images/life_en.png">
+         {{ end }}
+         {{ if eq $.Site.Language.Lang "tw" }}
+            <img src="/images/life.png">
+         {{ end }}
       </a>
    </div>
 </div>
