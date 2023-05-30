@@ -1,13 +1,12 @@
 baseURL = "https://asfaqs.github.io/"
-
 languageCode = "zh-tw"
 defaultContentLanguage = "zh-tw"
 defaultContentLanguageInSubdir = false
 
 title = 'Academia Sinica FAQ'
 theme = "hugo-theme-relearn"
-metaDataFormat = "json"
-
+uglyURLS = false
+metaDataFormat = "yaml"
 # required for official documentation served from subfolder
 relativeURLs = false
 
@@ -15,18 +14,21 @@ googleAnalytics = ''
 disqusShortname = 'asfaqs'
 
 [Params]
-  editURL = "https://asfaqs.github.io/"
-  description = "Academia Sinica FAQ Project"
-  author = "ITs"
-  showVisitedLinks = true
-  #collapsibleMenu = true
-  disableBreadcrumb = false
-  disableNextPrev = false
-  disableLandingPageButton = true
-  disableSeoHiddenPages = true
-  disableMermaid = false
-  #customMermaidURL = "https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"
-  titleSeparator = "::"
+   editURL = "https://asfaqs.github.io/"
+   description = "Academia Sinica FAQ Project"
+   author = "ITs"
+   alwaysopen = true
+   showVisitedLinks = false
+   disableSearch = false
+   disableSearchHiddenPages = false
+   #collapsibleMenu = true
+   disableBreadcrumb = false
+   disableNextPrev = true
+   disableLandingPageButton = true
+   disableSeoHiddenPages = true
+   disableMermaid = false
+   #customMermaidURL = "https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"
+   titleSeparator = "::"
 [Params.socialshare]
   facebook = true
   linkedin = true
@@ -41,9 +43,48 @@ disqusShortname = 'asfaqs'
   author = "authors"
 
 [outputs]
-  home = ["HTML", "RSS", "SEARCH"]
-  section = ["HTML", "RSS", "SEARCH" ]
-  page = ["HTML", "RSS", "SEARCH" "PRINT"]
+  home = ["HTML", "RSS", "SEARCH", "SEARCHPAGE"]
+  section = ["HTML", "RSS", "PRINT" ]
+  page = ["HTML", "RSS", "SEARCH", "PRINT"]
+
+[module]
+  [[module.mounts]]
+    source = 'archetypes'
+    target = 'archetypes'
+  [[module.mounts]]
+    source = 'assets'
+    target = 'assets'
+
+  # Language dependend settings:
+  # Use case https://gohugo.io/content-management/multilingual/#translation-by-filename
+  [[module.mounts]]
+    source = 'content'
+    target = 'content'
+  # Use case https://gohugo.io/content-management/multilingual/#translation-by-content-directory
+  #[[module.mounts]]
+  #  lang = 'en'
+  #  source = 'content/en'
+  #  target = 'content'
+  #[[module.mounts]]
+  #  lang = 'pir'
+  #  source = 'content/pir'
+  #  target = 'content'
+
+  [[module.mounts]]
+    source = 'data'
+    target = 'data'
+  [[module.mounts]]
+    source = 'i18n'
+    target = 'i18n'
+  [[module.mounts]]
+    source = '../images'
+    target = 'static/images'
+  [[module.mounts]]
+    source = 'layouts'
+    target = 'layouts'
+  [[module.mounts]]
+    source = 'static'
+    target = 'static'
 
 [Languages]
 [Languages.ja]
