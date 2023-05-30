@@ -41,9 +41,9 @@ disqusShortname = 'asfaqs'
   author = "authors"
 
 [outputs]
-  home = ["HTML", "RSS", "JSON"]
-  section = ["HTML", "RSS", "JSON" ]
-  page = ["HTML", "RSS", "JSON"]
+  home = ["HTML", "RSS", "SEARCH"]
+  section = ["HTML", "RSS", "SEARCH" ]
+  page = ["HTML", "RSS", "SEARCH" "PRINT"]
 
 [Languages]
 [Languages.ja]
