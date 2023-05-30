@@ -7,9 +7,10 @@
    {{ $data := index $.Site.Data $.Params.id }}
    <div class="accordion_one">
       <div id="accordion">
-         {{ idx := 0 }}
+         {{ .Scratch.Add "i" 0 }}
          {{ range $key, $vals := $data.items }}
-            {{ idx++ }}
+            {{ .Scratch.Add "i" 1 }}
+            {{ idx := .Scratch.Get "i" }}
             <div class="card">
                <div class="card-header" id="heading-{{ $data.serial }}">
                   <h5 class="mb-0">
