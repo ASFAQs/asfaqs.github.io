@@ -7,27 +7,29 @@
    {{ $data := index $.Site.Data $.Params.id }}
    <div class="accordion_one">
       <div id="accordion">
+         {{ idx := 0 }}
          {{ range $key, $vals := $data.items }}
+            {{ idx++ }}
             <div class="card">
                <div class="card-header" id="heading-{{ $data.serial }}">
                   <h5 class="mb-0">
-                     <button type="button" class="btn btn-link collapsed" style="border-style:none;" data-bs-toggle="collapse" data-bs-target="#collapse-{{ $data.serial }}" aria-expanded="true" aria-controls="collapse-{{ $data.serial }}">
+                     <button type="button" class="btn btn-link collapsed" style="border-style:none;" data-bs-toggle="collapse" data-bs-target="#collapse-{{ $data.serial }}{{ idx }}" aria-expanded="true" aria-controls="collapse-{{ $data.serial }}{{ idx }}">
                         <h2>{{ $key }}</h2>
                      </button>
                   </h5>
                </div>
-               <div id="collapse-{{ $data.serial }}" class="collapse" aria-labelledby="heading-{{ $data.serial}}" data-parent="#accordion">
+               <div id="collapse-{{ $data.serial }}{{ idx }}" class="collapse" aria-labelledby="heading-{{ $data.serial}}" data-parent="#accordion">
                   <div class="card-body">
                      <div class="panel-group" id="accordionFourLeft">
                         {{ range $index, $elem := $vals }}
                            <div class="panel panel_default">
                               <div class="panel-heading">
                                  <h4 class="panel-title">
-                                    <button type="button" class="btn btn-link collapsed" data-bs-toggle="collapse" data-parent="#accordion_oneLeft" data-bs-target="#collapseFiveLeft-{{$data.serial}}{{ $index }}" aria-expanded="false" aria-controls="collapseFiveLeft-{{ $data.serial }}{{ $index }}">
+                                    <button type="button" class="btn btn-link collapsed" data-bs-toggle="collapse" data-parent="#accordion_oneLeft" data-bs-target="#collapseFiveLeft-{{$data.serial}}{{ idx }}{{ $index }}" aria-expanded="false" aria-controls="collapseFiveLeft-{{ $data.serial }}{{ idx }}{{ $index }}">
                                     【{{ $elem.title }}】{{ $elem.question }}</button>
                                  </h4> 
                               </div>
-                              <div id="collapseFiveLeft-{{ $data.serial }}{{ $index }}" class="panel-collapse collapse" aria-expanded="false" role="tablist">
+                              <div id="collapseFiveLeft-{{ $data.serial }}{{ idx }}{{ $index }}" class="panel-collapse collapse" aria-expanded="false" role="tablist">
                                  <div class="panel-body">
                                     <div class="text-accordion">
                                        <p><font color="{{ $.Params.color }}"><b>{{ $elem.answer }}</b></font></p>
