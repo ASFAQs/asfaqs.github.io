@@ -1,6 +1,0 @@
-### 請點下方選類別，以顯示該類別之FAQ
-{{< _index >}}
-<p>
-   <font color="red" size="2em">本內容使用生成式人工智慧技術產生，若內容說明有不清楚與不得體處，尚請見諒並與資訊服務處反應。
-更多訊息可參考：<a href="https://github.com/AS-AIGC/AS-AIGFAQ" target=_blank><font color="red">https://github.com/AS-AIGC/AS-AIGFAQ</font></a></font>
-</p>
