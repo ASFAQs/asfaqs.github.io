@@ -1,3 +1,9 @@
+/*
+   原始資料轉化與加工程式
+   功能：
+      1、將csv轉為格式化的JSON檔案
+      2、為每一則FAQ增加一個UID，以便日後做相關識別（留言、喜歡、不喜歡...）
+*/
 package main
 
 import(
@@ -11,6 +17,7 @@ import(
    "math/rand"
    "encoding/csv"
    "encoding/json"
+   "github.com/google/uuid"
 )
 
 // category,title,question,group,url,contact,answer
@@ -21,6 +28,7 @@ type Items struct {
    Category		string		`json:"category"`
    Contact		string		`json:"contact"` 
    Url			string		`json:"url"`
+   UUID			string		`json:"uuid"`
 }
 
 type CSv struct {
@@ -80,6 +88,7 @@ func main() {
          i += 1
          continue
       }
+      uid := uuid.New()
       t := Items {
          Title:	   record[title["title"]],
          Question: record[title["question"]],
@@ -87,6 +96,7 @@ func main() {
          Category: record[title["category"]],
          Contact:  record[title["contact"]],
          Url:      record[title["url"]],
+         UUID:     uid.String(),
       }
       items[t.Category] = append(items[t.Category], t)
       // datas.ITEMs = append(datas.ITEMs, t)
