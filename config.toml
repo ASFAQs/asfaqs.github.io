@@ -115,7 +115,6 @@ name = "<i class='fas fa-fw fa-users'></i> Search by authors"
 url = "authors/"
 weight = 120
 
-
 [Languages.zh-tw]
    title = "中央研究院 FAQ 首頁"
    weight = 1
@@ -127,5 +126,12 @@ weight = 120
    title = 'Academia Sinica FAQ'
    weight = 2
    languageName = "English"
+   landingPageURL = "/"
+   landingPageName = "<i class='fas fa-home'></i> Home"
+
+[Languages.fr]
+   title = 'Academia Sinica FAQ'
+   weight = 3
+   languageName = "French"
    landingPageURL = "/"
    landingPageName = "<i class='fas fa-home'></i> Home"
