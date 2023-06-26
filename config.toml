@@ -130,8 +130,8 @@ weight = 120
    landingPageName = "<i class='fas fa-home'></i> Home"
 
 [Languages.fr]
-   title = 'Academia Sinica FAQ'
+   title = "FAQ de l'Académie Sinica"
    weight = 3
-   languageName = "French"
+   languageName = "Français"
    landingPageURL = "/"
-   landingPageName = "<i class='fas fa-home'></i> Home"
+   landingPageName = "<i class='fas fa-home'></i> Maison"
