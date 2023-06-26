@@ -4,6 +4,14 @@ clone:
 	rm -rf AS-AIGFAQ
 	git clone git@github.com:AS-AIGC/AS-AIGFAQ.git
 
+academicfr:
+	head -n 1 ${datadir}/AS-proposal-QA_fr.csv > academia.fr.csv
+	sed -s '1d' ${datadir}/AS-proposal-QA_fr.csv >> academia.fr.csv
+	sed -s '1d' ${datadir}/AS-dia-QA_fr.csv >> academia.fr.csv
+	go run main.go academia.fr.csv
+	mv academia.fr.json ../data/
+	rm -rf academia.fr.csv
+
 academicja:
 	head -n 1 ${datadir}/AS-proposal-QA_ja.csv > academia.ja.csv
 	sed -s '1d' ${datadir}/AS-proposal-QA_ja.csv >> academia.ja.csv
@@ -28,13 +36,22 @@ academic:
 	mv academia.json ../data/
 	rm -rf academia.csv
 
+lifefr:
+	head -n 1 ${datadir}/AS-general-QA_fr.csv > life.fr.csv 
+	sed -s '1d' ${datadir}/AS-general-QA_fr.csv >> life.fr.csv
+	sed -s '1d' ${datadir}/AS-art-QA_fr.csv >> life.fr.csv
+	go run main.go life.fr.csv
+	mv life.fr.json ../data
+	rm -rf .life.fr.csv
+
+
 lifeja:
 	head -n 1 ${datadir}/AS-general-QA_ja.csv > life.ja.csv 
 	sed -s '1d' ${datadir}/AS-general-QA_ja.csv >> life.ja.csv
 	sed -s '1d' ${datadir}/AS-art-QA_ja.csv >> life.ja.csv
 	go run main.go life.ja.csv
 	mv life.ja.json ../data
-	rm -rf .jalife.csv
+	rm -rf life.ja.csv
 
 lifeen:
 	head -n 1 ${datadir}/AS-general-QA_en.csv > life.en.csv 
@@ -71,6 +88,13 @@ itsja:
 	mv its.ja.json ../data
 	rm -rf its.ja.csv
 
+itsfr:
+	head -n 1 ${datadir}/AS-ITS-QA_fr.csv > its.fr.csv 
+	sed -s '1d' ${datadir}/AS-ITS-QA_fr.csv >> its.fr.csv
+	go run main.go its.fr.csv
+	mv its.fr.json ../data
+	rm -rf its.fr.csv
+
 budgettw:
 	head -n 1 ${datadir}/AS-dgbas-QA.csv > budget.csv 
 	sed -s '1d' ${datadir}/AS-dgbas-QA.csv >> budget.csv
@@ -90,12 +114,19 @@ budgetja:
 	mv budget.ja.json ../data
 	rm -rf budget.ja.csv
 
-academia: academic academicen academicja
+budgetfr:
+	head -n 1 ${datadir}/AS-dgbas-QA_fr.csv > budget.fr.csv 
+	sed -s '1d' ${datadir}/AS-dgbas-QA_fr.csv >> budget.fr.csv
+	go run main.go budget.fr.csv
+	mv budget.fr.json ../data
+	rm -rf budget.fr.csv
 
-life:lifetw lifeen lifeja
+academia: academic academicen academicja academicfr
 
-its: itstw itsja itsen
+life:lifetw lifeen lifeja lifefr
 
-budget: budgettw budgeten budgetja
+its: itstw itsja itsen itsfr
+
+budget: budgettw budgeten budgetja budgetfr
 
 re: clone life academia its budget

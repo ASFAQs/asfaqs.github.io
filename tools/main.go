@@ -17,7 +17,7 @@ import(
    "math/rand"
    "encoding/csv"
    "encoding/json"
-   "github.com/google/uuid"
+   "encoding/base64"
 )
 
 // category,title,question,group,url,contact,answer
@@ -88,7 +88,7 @@ func main() {
          i += 1
          continue
       }
-      uid := uuid.New()
+      uid := base64.StdEncoding.EncodeToString([]byte(record[title["title"]]))
       t := Items {
          Title:	   record[title["title"]],
          Question: record[title["question"]],
@@ -96,7 +96,7 @@ func main() {
          Category: record[title["category"]],
          Contact:  record[title["contact"]],
          Url:      record[title["url"]],
-         UUID:     uid.String(),
+         UUID:     uid,
       }
       items[t.Category] = append(items[t.Category], t)
       // datas.ITEMs = append(datas.ITEMs, t)
