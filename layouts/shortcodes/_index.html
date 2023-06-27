@@ -21,7 +21,7 @@
    </div>
 </div>
 
-menu: {{ .Site }}
+menu: {{ .Site.Pges}}
 <br>
 {{- with .Site.Menus.shortcuts }}
    {{- range sort . "Weight" }}
