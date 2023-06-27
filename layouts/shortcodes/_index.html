@@ -29,11 +29,10 @@
           <ul class="space">
             {{- range sort . "Weight" }}
               {{- $shortcut := . }}
-              {{- with $page.Site.GetPage (printf "%s" $shortcut.URL ) }}
-                {{- $to := . }}
-            <li>{{ $shortcut.Pre }}<a class="padding">{{ safeHTML $shortcut.Name }}</a>{{ $shortcut.Post }}</li>
+              {{- $to := . }}
+            <li>{{ $shortcut.Pre }}<a class="padding">{{ safeHTML $shortcut.Name }}</a></li>
               {{- else }}
-            <li>{{ $shortcut.Pre }}<a class="padding">{{ safeHTML $shortcut.Name }}</a>{{ $shortcut.Post }}</li>
+            <li>{{ $shortcut.Pre }}<a class="padding">{{ safeHTML $shortcut.Name }}</a></li>
               {{- end }}
             {{- end }}
           </ul>
