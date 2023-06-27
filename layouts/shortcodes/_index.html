@@ -30,14 +30,11 @@
             {{- range sort . "Weight" }}
               {{- $shortcut := . }}
               {{- $to := . }}
-            <li>{{ $shortcut.Pre }}<a class="padding">{{ safeHTML $shortcut.Name }}</a></li>
-              {{- else }}
-            <li>{{ $shortcut.Pre }}<a class="padding">{{ safeHTML $shortcut.Name }}</a></li>
-              {{- end }}
+               <li>{{ $shortcut.Pre }}<a class="padding">{{ safeHTML $shortcut.Name }}</a></li>
             {{- end }}
           </ul>
         </div>
-        {{- end }}
+{{- end }}
 
 <style>
 .cards {
