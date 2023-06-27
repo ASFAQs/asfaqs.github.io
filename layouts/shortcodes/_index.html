@@ -26,6 +26,7 @@
    </div>
 </div>
 
+{{- $page := . }}
 {{- with .Site.Menus.shortcuts }}
         <div id="shortcuts">
           <div class="nav-title padding">{{ if not $disableShortcutsTitle }}{{ T "Shortcuts-Title" }}{{ end }}</div>
