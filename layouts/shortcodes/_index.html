@@ -21,15 +21,13 @@
    </div>
 </div>
 
+menu: {{ .Site.Menus }}
+<br>
 {{- with .Site.Menus.shortcuts }}
-        <div id="shortcuts">
-          <ul class="space">
-            {{- range sort . "Weight" }}
-              {{- $shortcut := . }}
-               <li>{{ $shortcut.Pre }}<a class="padding">{{ safeHTML $shortcut.Name }}</a></li>
-            {{- end }}
-          </ul>
-        </div>
+   {{- range sort . "Weight" }}
+      {{- $shortcut := . }}
+      <a class="padding">{{ safeHTML $shortcut.Name }}</a>
+   {{- end }}
 {{- end }}
 
 <style>
