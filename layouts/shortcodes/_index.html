@@ -1,42 +1,24 @@
 <div class="cards">
    <div class="card">
       <a href="academia/index.html">
-         {{ if eq $.Site.Language.Lang "en" }}
-            <img src="/images/academia_en.png">
-         {{ end }}
-         {{ if eq $.Site.Language.Lang "zh-tw" }}
-            <img src="/images/academia.png">
-         {{ end }}
+         <img src="/images/academia.png">
+{{.Title}}
       </a>
    </div>
    <div class="card">
       <a href="its/index.html">
-         {{ if eq $.Site.Language.Lang "en" }}
-            <img src="/images/its_en.png">
-         {{ end }}
-         {{ if eq $.Site.Language.Lang "zh-tw" }}
-            <img src="/images/its.png">
-         {{ end }}
+         <img src="/images/its.png">
+{{.LinkTitle}}
       </a>
    </div>
    <div class="card">
       <a href="budget/index.html">
-         {{ if eq $.Site.Language.Lang "en" }}
-            <img src="/images/budget_en.png">
-         {{ end }}
-         {{ if eq $.Site.Language.Lang "zh-tw" }}
-            <img src="/images/budget.png">
-         {{ end }}
+         <img src="/images/budget.png">
       </a>
    </div>
    <div class="card">
       <a href="life/index.html">
-         {{ if eq $.Site.Language.Lang "en" }}
-            <img src="/images/life_en.png">
-         {{ end }}
-         {{ if eq $.Site.Language.Lang "zh-tw" }}
-            <img src="/images/life.png">
-         {{ end }}
+         <img src="/images/life.png">
       </a>
    </div>
 </div>
