@@ -15,6 +15,9 @@
       <a href="budget/index.html">
          <img src="/images/budget.png">
       </a>
+{{- range $pages.ByTitle }}
+                {{- ks "alwaysopen" $defaultAlwaysopen }}
+{{- end }}
    </div>
    <div class="card">
       <a href="life/index.html">
@@ -22,6 +25,23 @@
       </a>
    </div>
 </div>
+
+{{- with .Site.Menus.shortcuts }}
+        <div id="shortcuts">
+          <div class="nav-title padding">{{ if not $disableShortcutsTitle }}{{ T "Shortcuts-Title" }}{{ end }}</div>
+          <ul class="space">
+            {{- range sort . "Weight" }}
+              {{- $shortcut := . }}
+              {{- with $page.Site.GetPage (printf "%s" $shortcut.URL ) }}
+                {{- $to := . }}
+            <li>{{ $shortcut.Pre }}<a class="padding" href="{{ partial "relLangPrettyUglyURL.hugo" (dict "to" $to) }}">{{ safeHTML $shortcut.Name }}</a>{{ $shortcut.Post }}</li>
+              {{- else }}
+            <li>{{ $shortcut.Pre }}<a class="padding" href="{{ $shortcut.URL | relLangURL }}">{{ safeHTML $shortcut.Name }}</a>{{ $shortcut.Post }}</li>
+              {{- end }}
+            {{- end }}
+          </ul>
+        </div>
+        {{- end }}
 
 <style>
 .cards {
