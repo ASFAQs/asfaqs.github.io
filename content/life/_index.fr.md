@@ -1,7 +1,7 @@
 ---
 "title": "Life"
 "weight": 50
-"image": "life.png"
+"classify": "life"
 ---
 
 {{< book-list id="life.fr" data="items" color="#b49150" >}}

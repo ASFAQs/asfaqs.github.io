@@ -1,7 +1,7 @@
 ---
 "title": "資金調達"
 "weight": 40
-"image": "budget.png"
+"classify": "budget"
 ---
 
 {{< book-list id="budget.ja" data="items" color="#00979c" >}}

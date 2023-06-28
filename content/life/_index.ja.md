@@ -1,7 +1,7 @@
 ---
 "title": "人生"
 "weight": 50
-"image": "life.png"
+"classify": "life"
 ---
 
 {{< book-list id="life.ja" data="items" color="#b49150" >}}

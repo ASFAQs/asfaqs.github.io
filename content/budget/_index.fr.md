@@ -1,7 +1,7 @@
 ---
 "title": "Budget"
 "weight": 40
-"image": "budget.png"
+"classify": "budget"
 ---
 
 {{< book-list id="budget.fr" data="items" color="#00979c" >}}

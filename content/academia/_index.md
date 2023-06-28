@@ -1,7 +1,7 @@
 ---
 "title": "學術"
 "weight": 10
-"image": "academia.png"
+"classify": "academia"
 ---
 
 {{< book-list id="academia" data="items" color="#7984ad" >}}

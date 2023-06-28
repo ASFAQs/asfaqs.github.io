@@ -1,7 +1,7 @@
 ---
 "title": "情報"
 "weight": 20
-"image": "its.png"
+"classify": "its"
 ---
 
 {{< book-list id="its.ja" data="items" color="#9b8eb0" >}}
