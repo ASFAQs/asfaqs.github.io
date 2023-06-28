@@ -21,14 +21,7 @@
    </div>
 </div>
 
-menu: {{ .Site.Menus.main}}
-<br>
-{{- with .Site.Menus.shortcuts }}
-   {{- range sort . "Weight" }}
-      {{- $shortcut := . }}
-      <a class="padding">{{ safeHTML $shortcut.Name }}</a>
-   {{- end }}
-{{- end }}
+menu: {{ .Params }}
 
 <style>
 .cards {
