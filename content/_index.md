@@ -1,5 +1,5 @@
 ### 請點下方選類別，以顯示該類別之FAQ
-{{ .site.Menus }}
+{{ .Site.Menus }}
 {{< _index >}}
 {{< tail >}}
 <p>
