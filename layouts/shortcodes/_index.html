@@ -1,6 +1,16 @@
 <div class="cards">
 <!--
    <div class="card">
+      <a href="academia/index.html">
+         <img src="/images/academia.png">
+      </a>
+   </div>
+   <div class="card">
+      <a href="its/index.html">
+         <img src="/images/its.png">
+      </a>
+   </div>
+   <div class="card">
       <a href="budget/index.html">
          <img src="/images/budget.png">
       </a>
@@ -8,13 +18,13 @@
 -->
    {{- range .Site.Home.Pages.ByWeight }}
    <div class="card">
-      <a href="/index.html">
-         <img src="/images/.png">
+      <a href="{{- .Page.classify }}/index.html">
+         <img src="/images/{{- .Page.classify }}.png">
       </a>
       <div class="">{{ .Page.Title }}</div>
    </div>
-{{ .Page }}
    {{- end }}
+{{ .Params }]
 </div>
 <style>
 .cards {
