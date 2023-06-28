@@ -18,11 +18,11 @@
 -->
    {{- range .Site.Home.Pages.ByWeight }}
    <div class="card">
-      <a href="{{- .Params.id -}}/index.html">
+      <a href="/index.html">
          <img src="/images/">
       </a>
       <div class="">{{ .Page.Title }}</div>
-{{ .Params.Image }}
+{{ .Params }}
    </div>
    {{- end }}
 </div>
