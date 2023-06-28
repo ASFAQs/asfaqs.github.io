@@ -1,27 +1,10 @@
 <div class="cards">
-<!--
-   <div class="card">
-      <a href="academia/index.html">
-         <img src="/images/academia.png">
-      </a>
-   </div>
-   <div class="card">
-      <a href="its/index.html">
-         <img src="/images/its.png">
-      </a>
-   </div>
-   <div class="card">
-      <a href="budget/index.html">
-         <img src="/images/budget.png">
-      </a>
-   </div>
--->
    {{- range .Site.Home.Pages.ByWeight }}
    <div class="card">
       <a href="{{- .Page.Params.classify }}/index.html">
          <img src="/images/{{- .Page.Params.classify }}.png">
       </a>
-      <div class="">{{ .Page.Params.title }}</div>
+      <div class="title">{{ .Page.Params.title }}</div>
    </div>
    {{- end }}
 </div>
@@ -41,6 +24,11 @@
 .cards .card img:hover {
   opacity: 0.5;
   cursor: pointer;
+}
+.cards .card .title {
+   text-align: center;
+   font-weight: 600;
+   font-size: 1.2em;
 }
 
 @media only screen and (min-width: 970px) {
