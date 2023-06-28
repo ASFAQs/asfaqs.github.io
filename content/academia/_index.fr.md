@@ -1,6 +1,7 @@
 ---
 "title": "Academic"
 "weight": 10
+"image": "academia.png"
 ---
 
 {{< book-list id="academia.fr" data="items" color="#7984ad" >}}

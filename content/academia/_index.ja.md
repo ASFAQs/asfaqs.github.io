@@ -2,6 +2,7 @@
 "title": "学術的な"
 "weight": 10
 "translationKey": "academia"
+"image": "academia.png"
 ---
 
 {{< book-list id="academia.ja" data="items" color="#7984ad" >}}

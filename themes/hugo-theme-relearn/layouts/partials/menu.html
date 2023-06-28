@@ -15,13 +15,13 @@
 {{ partial "search.html" . }}
         {{- end }}
       </div>
-      {{- if not .Site.Params.disableLandingPageButton }}
+   {{- if not .Site.Params.disableLandingPageButton }}
       <div id="homelinks" class="default-animation">
         <ul>
           <li><a class="padding" href="{{ partial "relLangPrettyUglyURL.hugo" (dict "to" .Site.Home) }}">{{ .Site.Params.landingPageName | default `<i class="fas fa-home"></i> Home` | safeHTML }}</a></li>
         </ul>
       </div>
-      {{- end }}
+   {{- end }}
       <div id="content-wrapper" class="highlightable">
         <ul class="topics enlarge morespace{{ if .Site.Params.collapsibleMenu }} collapsible-menu{{ end }}">
           {{- $defaultOrdersectionsby := .Site.Params.ordersectionsby | default "weight" }}

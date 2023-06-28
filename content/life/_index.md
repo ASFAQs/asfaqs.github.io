@@ -1,6 +1,7 @@
 ---
 "title": "生活"
 "weight": 50
+"image": "life.png"
 ---
 
 {{< book-list id="life" data="items" color="#b49150" >}}

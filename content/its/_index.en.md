@@ -1,6 +1,7 @@
 ---
 "title": "Computing Facility"
 "weight": 20
+"image": "its.png"
 ---
 
 {{< book-list id="its.en" data="items" color="#9b8eb0" >}}
