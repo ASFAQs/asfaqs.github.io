@@ -18,7 +18,7 @@
 -->
    {{- range .Site.Home.Pages.ByWeight }}
    <div class="card">
-      <a href="{{- $.Params.id -}}/index.html">
+      <a href="{{- .Page.Params.id -}}/index.html">
          <img src="/images/{{- .Page.Image }}">
       </a>
       <div class="">{{ .Page.Title }}</div>
