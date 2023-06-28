@@ -22,7 +22,9 @@
 </div>
 
 page {{ .Site.Params }}
-{{ .Site.Home.Pages }}
+{{- range .Site.Home.Pages.ByWeight }}
+   {{ .Page.Title }}
+{{- end }}
 
 <style>
 .cards {
