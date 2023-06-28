@@ -18,12 +18,11 @@
 -->
    {{- range .Site.Home.Pages.ByWeight }}
    <div class="card">
-      <a href="/index.html">
-         <img src="/images/.png">
+      <a href="{{- .Page.Params.classify }}/index.html">
+         <img src="/images/{{- .Page.Params.classify }}.png">
       </a>
-      <div class="">{{ .Page.Title }}</div>
+      <div class="">{{ .Page.Params.title }}</div>
    </div>
-{{ .Page.Params }}
    {{- end }}
 </div>
 <style>
