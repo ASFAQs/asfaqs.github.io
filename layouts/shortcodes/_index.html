@@ -1,4 +1,5 @@
 <div class="cards">
+<!--
    <div class="card">
       <a href="academia/index.html">
          <img src="/images/academia.png">
@@ -14,17 +15,16 @@
          <img src="/images/budget.png">
       </a>
    </div>
+-->
+   {{- range .Site.Home.Pages.ByWeight }}
    <div class="card">
-      <a href="life/index.html">
-         <img src="/images/life.png">
+      <a href="{{- $.Params.id -}}/index.html">
+         <img src="/images/{{- .Page.Image }}">
       </a>
+      <div class="">{{ .Page.Title }}</div>
    </div>
+   {{- end }}
 </div>
-
-page {{ .Site.Params }}
-{{- range .Site.Home.Pages.ByWeight }}
-   {{ .Page.Title }}
-{{- end }}
 
 <style>
 .cards {
