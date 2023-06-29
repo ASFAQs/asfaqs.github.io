@@ -42,7 +42,7 @@ lifefr:
 	sed -s '1d' ${datadir}/AS-art-QA_fr.csv >> life.fr.csv
 	go run main.go life.fr.csv
 	mv life.fr.json ../data
-	rm -rf .life.fr.csv
+	rm -rf life.fr.csv
 
 
 lifeja:
