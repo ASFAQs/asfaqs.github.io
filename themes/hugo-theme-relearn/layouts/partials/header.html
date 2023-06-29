@@ -16,7 +16,7 @@
     {{- end }}
     {{- $title = printf "%s%s" $title .Site.Title }}
     <title>{{ $title }}</title>
-
+    <script src="https://counterapi.com/c.js" async ></script>
     {{- if .IsTranslated -}}
       {{- range $index, $trans := .AllTranslations }}
         {{- if eq $index 0 }}
