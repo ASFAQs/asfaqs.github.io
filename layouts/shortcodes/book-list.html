@@ -35,7 +35,8 @@
                                        <div>
                                           <p>
                                              <small class="datasource">
-                                                <div class="counterapi voted" icon="heart" behavior="vote" readOnly="true" startNumber="0" key="{{ $elem.uuid }}"></div> 
+                                                <div class="counterapi" action="voteHappy" score="1" label="like" icon="thumbs-up" behavior="vote" color="blue" readOnly="true" startNumber="0" key="{{ $elem.uuid }}-like"></div> 
+                                                <div class="counterapi" action="voteHappy" score="1" label="dislike" icon="thumbs-down" behavior="vote" color="blue" readOnly="true" startNumber="0" key="{{ $elem.uuid }}-dislike"></div> 
                                                 {{ if eq $.Site.Language.Lang "en" }} From: {{ end }}
                                                 {{ if eq $.Site.Language.Lang "zh-tw" }} 資料來源：{{ end }}
                                                 <a href="{{ $elem.url }}" target=_blank>
