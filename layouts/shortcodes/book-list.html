@@ -35,6 +35,7 @@
                                        <div>
                                           <p>
                                              <small class="datasource">
+                                                <div class="counterapi voted" icon="heart" behavior="vote" readOnly="true" startNumber="0" key="{{ $elem.uuid }}"></div> 
                                                 {{ if eq $.Site.Language.Lang "en" }} From: {{ end }}
                                                 {{ if eq $.Site.Language.Lang "zh-tw" }} 資料來源：{{ end }}
                                                 <a href="{{ $elem.url }}" target=_blank>
