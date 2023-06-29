@@ -88,7 +88,7 @@ func main() {
          i += 1
          continue
       }
-      uid := base64.StdEncoding.EncodeToString([]byte(title["question"]))
+      uid := base64.StdEncoding.EncodeToString([]byte(record[title["question"]]))
       t := Items {
          Title:	   record[title["title"]],
          Question: record[title["question"]],
