@@ -42,9 +42,11 @@
                                                 {{ if eq $.Site.Language.Lang "en" }} Contact info: {{ end }}
                                                 {{ if eq $.Site.Language.Lang "zh-tw" }} 本則FAQ聯絡資訊：{{ end }}
                                                 {{ $elem.contact }}
+                                             </small>
+                                             <div style="text-align:right">
                                                 <span class="counterapi" action="voteHappy" abbreviate="true" label="like" behavior="vote" startNumber="0" key="{{ $elem.uuid }}-like" noIcon="true" ></span> 
                                                 <span class="counterapi" action="voteHappy" abbreviate="true" noIcon="true" label="dislike" startNumber="0" key="{{ $elem.uuid }}-dislike" color="red"></span> 
-                                             </small>
+                                             </div>
                                           </p>
                                        </div>
                                     </div>
