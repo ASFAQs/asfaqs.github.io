@@ -35,8 +35,8 @@
                                        <div>
                                           <p>
                                              <small class="datasource">
-                                                <div class="counterapi" action="voteHappy" score="1" label="like" icon="thumbs-up" behavior="vote" color="blue" readOnly="true" startNumber="0" key="{{ $elem.uuid }}-like"></div> 
-                                                <div class="counterapi" action="voteHappy" score="1" label="dislike" icon="thumbs-down" behavior="vote" color="blue" readOnly="true" startNumber="0" key="{{ $elem.uuid }}-dislike"></div> 
+                                                <span class="counterapi" action="voteHappy" score="1" label="like" icon="thumbs-up" behavior="vote" color="blue" readOnly="true" startNumber="0" key="{{ $elem.uuid }}-like"></span> 
+                                                <span class="counterapi" action="voteHappy" score="1" label="dislike" icon="thumbs-down" behavior="vote" color="blue" readOnly="true" startNumber="0" key="{{ $elem.uuid }}-dislike"></span> 
                                                 {{ if eq $.Site.Language.Lang "en" }} From: {{ end }}
                                                 {{ if eq $.Site.Language.Lang "zh-tw" }} 資料來源：{{ end }}
                                                 <a href="{{ $elem.url }}" target=_blank>
