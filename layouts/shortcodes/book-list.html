@@ -35,8 +35,6 @@
                                        <div>
                                           <p>
                                              <small class="datasource">
-                                                <span class="counterapi" action="voteHappy" abbreviate="true" noIcon="true" score="1" label="like" icon="thumbs-up" behavior="vote" color="blue" readOnly="true" startNumber="0" key="{{ $elem.uuid }}-like" style="min-height:30px"></span> 
-                                                <span class="counterapi" action="voteHappy" abbreviate="true" noIcon="true" score="1" label="dislike" icon="thumbs-down" behavior="vote" bg="#ffe6e6" color="red" readOnly="true" startNumber="0" key="{{ $elem.uuid }}-dislike" style="min-height:30px"></span> 
                                                 {{ if eq $.Site.Language.Lang "en" }} From: {{ end }}
                                                 {{ if eq $.Site.Language.Lang "zh-tw" }} 資料來源：{{ end }}
                                                 <a href="{{ $elem.url }}" target=_blank>
@@ -44,6 +42,8 @@
                                                 {{ if eq $.Site.Language.Lang "en" }} Contact info: {{ end }}
                                                 {{ if eq $.Site.Language.Lang "zh-tw" }} 本則FAQ聯絡資訊：{{ end }}
                                                 {{ $elem.contact }}
+                                                <span class="counterapi" action="voteHappy" abbreviate="true" noIcon="true" score="1" label="like" icon="thumbs-up" behavior="vote" color="blue" readOnly="false" startNumber="0" key="{{ $elem.uuid }}-like" style="max-height:20px"></span> 
+                                                <span class="counterapi" action="voteHappy" abbreviate="true" noIcon="true" score="1" label="dislike" icon="thumbs-down" behavior="vote" bg="#ffe6e6" color="red" readOnly="true" startNumber="0" key="{{ $elem.uuid }}-dislike" style="min-height:30px"></span> 
                                              </small>
                                           </p>
                                        </div>
