@@ -42,7 +42,7 @@
                                                 {{ if eq $.Site.Language.Lang "en" }} Contact info: {{ end }}
                                                 {{ if eq $.Site.Language.Lang "zh-tw" }} 本則FAQ聯絡資訊：{{ end }}
                                                 {{ $elem.contact }}
-                                                <span class="counterapi" action="voteHappy" abbreviate="true" noIcon="true" label="like" behavior="vote" startNumber="0" key="{{ $elem.uuid }}-like" noCSS="true"></span> 
+                                                <span class="counterapi" action="voteHappy" abbreviate="true" noIcon="true" label="like" behavior="vote" startNumber="0" key="{{ $elem.uuid }}-like"></span> 
                                                 <span class="counterapi" action="voteHappy" abbreviate="true" noIcon="true" bg="transparent" label="dislike" startNumber="0" key="{{ $elem.uuid }}-dislike"></span> 
                                              </small>
                                           </p>
