@@ -6,4 +6,3 @@
 
 {{< book-list id="academia.en" data="items" color="#7984ad" >}}
 {{< warning >}}
-{{< pagetail_en >}}
