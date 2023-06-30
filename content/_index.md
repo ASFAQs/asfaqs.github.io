@@ -2,6 +2,7 @@
 {{< _index >}}
 {{< tail >}}
 <p>
-   <font color="red" size="2em">本內容使用生成式人工智慧技術產生，若內容說明有不清楚與不得體處，尚請見諒並與資訊服務處反應。
-更多訊息可參考：<a href="https://github.com/AS-AIGC/AS-AIGFAQ" target=_blank><font color="red">https://github.com/AS-AIGC/AS-AIGFAQ</font></a></font>
+   <font color="red" size="2em">
+      本網站之內容為生成式人工智慧技術 (<a href="https://github.com/AS-AIGC/AS-AIGFAQ" target=_blank>AS-AIGFAQ</a>) 自動產生，若文字說明有不清楚與不得體處，敬請見諒。若有任何問題或建議，歡迎洽詢本處電子服務台 (<a href="https://8855.its.sinica.edu.tw/" target=_blank>https://8855.its.sinica.edu.tw/</a>)，或於上班時間電洽：02-2789-8855。
+   </font>
 </p>
