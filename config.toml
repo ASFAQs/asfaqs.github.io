@@ -10,7 +10,7 @@ metaDataFormat = "yaml"
 # required for official documentation served from subfolder
 relativeURLs = false
 
-googleAnalytics = ''
+googleAnalytics = 'G-T39HDMPC30'
 disqusShortname = 'asfaqs'
 
 [Params]
