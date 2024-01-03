@@ -88,6 +88,10 @@ func main() {
          i += 1
          continue
       }
+      if len(title) != len(record) {
+         fmt.Printf("第%d行資料長度錯誤，應為%d，但偵測到：%d\n", i+1, len(title), len(record))
+	 os.Exit(3)
+      }
       uid := base64.StdEncoding.EncodeToString([]byte(record[title["question"]]))
       t := Items {
          Title:	   record[title["title"]],
