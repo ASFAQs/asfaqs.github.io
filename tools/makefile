@@ -23,6 +23,7 @@ academicja:
 academicen:
 	head -n 1 ${datadir}/AS-proposal-QA_en.csv > academia.en.csv
 	sed -s '1d' ${datadir}/AS-proposal-QA_en.csv >> academia.en.csv
+	echo "\n" >> academia.en.csv
 	sed -s '1d' ${datadir}/AS-dia-QA_en.csv >> academia.en.csv
 	go run main.go academia.en.csv
 	mv academia.en.json ../data/
@@ -31,6 +32,7 @@ academicen:
 academic:
 	head -n 1 ${datadir}/AS-proposal-QA.csv > academia.csv
 	sed -s '1d' ${datadir}/AS-proposal-QA.csv >> academia.csv
+	echo "\n" >> academia.csv
 	sed -s '1d' ${datadir}/AS-dia-QA.csv >> academia.csv
 	go run main.go academia.csv
 	mv academia.json ../data/
@@ -64,6 +66,7 @@ lifeen:
 lifetw:
 	head -n 1 ${datadir}/AS-general-QA.csv > life.csv 
 	sed -s '1d' ${datadir}/AS-general-QA.csv >> life.csv
+	echo "\n" >> life.csv
 	sed -s '1d' ${datadir}/AS-art-QA.csv >> life.csv
 	go run main.go life.csv
 	mv life.json ../data
@@ -121,12 +124,46 @@ budgetfr:
 	mv budget.fr.json ../data
 	rm -rf budget.fr.csv
 
+hrtw:
+	head -n 1 ${datadir}/AS-hro-QA.csv > hr.csv 
+	sed -s '1d' ${datadir}/AS-hro-QA.csv >> hr.csv
+	go run main.go hr.csv
+	mv hr.json ../data
+	rm -rf hr.csv
+
+hren:
+	head -n 1 ${datadir}/AS-hro-QA_en.csv > hr.en.csv 
+	sed -s '1d' ${datadir}/AS-hro-QA_en.csv >> hr.en.csv
+	go run main.go hr.en.csv
+	mv hr.en.json ../data
+	rm -rf hr.en.csv
+
+hrja:
+	head -n 1 ${datadir}/AS-hro-QA_ja.csv > hr.ja.csv 
+	sed -s '1d' ${datadir}/AS-hro-QA_ja.csv >> hr.ja.csv
+	go run main.go hr.ja.csv
+	mv hr.ja.json ../data
+	rm -rf hr.ja.csv
+hrfr:
+	head -n 1 ${datadir}/AS-hro-QA_fr.csv > hr.fr.csv 
+	sed -s '1d' ${datadir}/AS-hro-QA_fr.csv >> hr.fr.csv
+	go run main.go hr.fr.csv
+	mv hr.fr.json ../data
+	rm -rf hr.fr.csv
+
+
 academia: academic academicen academicja academicfr
+#academia: academic academicja academicfr
 
 life:lifetw lifeen lifeja lifefr
 
 its: itstw itsja itsen itsfr
 
+hr: hrtw hrja hren hrfr
+
 budget: budgettw budgeten budgetja budgetfr
 
-re: clone life academia its budget
+#run: life its budget hr academia
+run: hr
+
+re: clone run

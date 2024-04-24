@@ -18,6 +18,8 @@ import(
    "encoding/csv"
    "encoding/json"
    "encoding/base64"
+   // "golang.org/x/text/transform"
+   // "golang.org/x/text/encoding/traditionalchinese"
 )
 
 // category,title,question,group,url,contact,answer
@@ -74,6 +76,11 @@ func main() {
    }
    r := csv.NewReader(file)
    r.Comma = ','   // 以何種字元作分隔，預設為`,`。所以這裡可拿掉這行
+   r.Comment = '#'   // 註解
+   r.LazyQuotes = true
+   r.ReuseRecord = true
+   r.TrimLeadingSpace = true
+   // r.Decode = traditionalchinese.Big5.NewEncoder()
    i := 0
    items := map[string][]Items{}
    for {
@@ -90,6 +97,7 @@ func main() {
       }
       if len(title) != len(record) {
          fmt.Printf("第%d行資料長度錯誤，應為%d，但偵測到：%d\n", i+1, len(title), len(record))
+	 fmt.Printf("%v\n", record[0])
 	 os.Exit(3)
       }
       uid := base64.StdEncoding.EncodeToString([]byte(record[title["question"]]))
