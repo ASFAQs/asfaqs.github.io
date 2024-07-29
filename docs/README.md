@@ -1,5 +1,15 @@
 # 中央研究院FAQ顯示研究
 
+## 資料放置目錄
+
+* /data/*.json
+
+## 樣板修改
+
+* 個別頁面 /content
+
+* /themes/hugo-theme-relearn/
+
 
 ## shortcodes
 * [網站](https://asfaqs.github.io)

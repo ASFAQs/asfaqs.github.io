@@ -23,7 +23,6 @@ academicja:
 academicen:
 	head -n 1 ${datadir}/AS-proposal-QA_en.csv > academia.en.csv
 	sed -s '1d' ${datadir}/AS-proposal-QA_en.csv >> academia.en.csv
-	echo "\n" >> academia.en.csv
 	sed -s '1d' ${datadir}/AS-dia-QA_en.csv >> academia.en.csv
 	go run main.go academia.en.csv
 	mv academia.en.json ../data/
@@ -153,17 +152,12 @@ hrfr:
 
 
 academia: academic academicen academicja academicfr
-#academia: academic academicja academicfr
-
 life:lifetw lifeen lifeja lifefr
-
 its: itstw itsja itsen itsfr
-
 hr: hrtw hrja hren hrfr
-
 budget: budgettw budgeten budgetja budgetfr
 
-#run: life its budget hr academia
-run: hr
+run: life its budget hr academia
+# run: hr
 
 re: clone run
