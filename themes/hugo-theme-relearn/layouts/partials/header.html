@@ -105,9 +105,11 @@
         {{- if and (eq $outputFormat "html") .Site.Params.editURL $File }}
           {{- with $File.Path }}
           <div id="top-github-link">
+<!--
             <a class="github-link topbar-link" title='{{ T "Edit-this-page" }} (CTRL+ALT+w)' href="{{ $Site.Params.editURL }}{{ strings.TrimLeft "/" (replace $File.Dir "\\" "/") }}{{ $File.LogicalName }}" target="_blank">
               <i class="fas fa-pen fa-fw"></i>
             </a>
+-->
           </div>
           {{- end }}
         {{- end }}
